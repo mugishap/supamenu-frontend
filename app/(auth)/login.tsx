@@ -16,7 +16,7 @@ export default function Login() {
   return (
     <SafeAreaView className='flex-1 w-full flex flex-col bg-primary justify-end items-end'>
       <Stack.Screen options={{ headerShown: false }} />
-      <View className='bg-white w-full p-4 rounded-t-2xl flex flex-col items-center pb-20'>
+      <View className='bg-white w-full p-4 rounded-t-2xl flex flex-col items-center pb-1'>
         <Text className='text-4xl my-3 font-bold'>Supa<Text className='text-primary'>Menu</Text></Text>
         <Text className='mt-4 font-semibold text-lg'>Welcome</Text>
         <Text className='text-slate-700 my-3'>Sign In to continue</Text>
@@ -45,7 +45,7 @@ export default function Login() {
             )}
             name="email"
           />
-          {errors.email && <Text className='text-red'>{errors?.email?.message as string}</Text>}
+          {errors.email && <Text className='text-red-600'>{errors?.email?.message as string}</Text>}
         </View>
 
         <View className='w-full flex flex-col my-2'>
@@ -77,14 +77,14 @@ export default function Login() {
             )}
             name="password"
           />
-          {errors.password && <Text className='text-red'>{errors?.password?.message as string}</Text>}
+          {errors.password && <Text className='text-red-600'>{errors?.password?.message as string}</Text>}
         </View>
 
         <TouchableOpacity className='my-2 w-full py-2 rounded-lg bg-primary text-white' onPress={handleSubmit(onSubmit)}>
           <Text className='text-white font-semibold text-center text-xl'>Sign In</Text>
         </TouchableOpacity>
         <Text className='text-center text-slate-700 my-2 mb-4'>OR</Text>
-        <TouchableOpacity className='my-2 w-full border p-4 border-slate-200 rounded-xl flex flex-row items-center relative'>
+        <TouchableOpacity onPress={() => router.push("/home")} className='my-2 w-full border p-4 border-slate-200 rounded-xl flex flex-row items-center relative'>
           <Image source={require('./../../assets/images/google.png')} className='w-8 h-8 mx-2 absolute' />
           <Text className='text-slate-500 font-semibold text-center mx-auto'>Login with Google</Text>
         </TouchableOpacity>

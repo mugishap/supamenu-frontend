@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function History() {
+
     return (
         <SafeAreaView className='flex-1 flex-col bg-white'>
             <Text className='font-semibold text-lg mb-4 ml-2'>History</Text>

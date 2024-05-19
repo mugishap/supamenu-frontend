@@ -77,27 +77,6 @@ export default function home() {
           )}
           keyExtractor={(item, index) => index.toString()}
         />
-        {/* {
-            data.map((item, index) => (
-              <View key={index} className='flex flex-col bg-white rounded-xl p-2 shadow-md my-2'>
-                <Image
-                  source={{ uri: item.image }}
-                  width={Dimensions.get('window').width - 20}
-                  height={200}
-                  resizeMode='cover'
-                  className='rounded-xl mb-2'
-                />
-                <View className='w-full flex flex-row items-start justify-between'>
-                  <View className='max-w-8/12 flex flex-col'>
-                    <Text className='font-semibold text-lg'>{item.title}</Text>
-                    <Text className='text-sm text-gray-500'>${item.price}</Text>
-                  </View>
-                  <AntDesign name="hearto" size={22} color="#F7941C" />
-                </View>
-              </View>
-
-            ))
-          } */}
       </View>
     </SafeAreaView>
   );

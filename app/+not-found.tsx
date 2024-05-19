@@ -27,7 +27,7 @@ export default function NotFoundScreen() {
           <Text className="text-[#2A2C30] font-medium text-2xl">Sorry Page Not Found :(</Text>
           <Text className=" text-center max-w-md text-base">We are sorry. The Page you are looking for does not exist. It might have been moved or delete.</Text>
         </View>
-        <TouchableOpacity className=" bg-primary rounded py-3 px-8 text-lg" onPress={() => router.push("/login")}>
+        <TouchableOpacity className=" bg-primary rounded py-3 px-8 text-lg" onPress={() => router.push("/home")}>
           <Text className='text-white'>Back To Home Page</Text>
         </TouchableOpacity>
       </View>

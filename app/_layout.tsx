@@ -19,7 +19,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    FSMeridianTrial: require('../assets/fonts/FSMeridianTrial-Regular.otf'),
+    Jost: require('./../assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf'),
     ...FontAwesome.font,
   });
 
@@ -48,7 +48,7 @@ function RootLayoutNav() {
         <ThemeProvider value={DefaultTheme}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" />
+            {/* <Stack.Screen name="+not-found" /> */}
           </Stack>
         </ThemeProvider>
       </GlobalProvider>
